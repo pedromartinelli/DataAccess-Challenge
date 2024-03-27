@@ -1,5 +1,8 @@
-﻿namespace Blog_Challenge.Models
+﻿using Dapper.Contrib.Extensions;
+
+namespace Blog_Challenge.Models
 {
+    [Table("[Post]")]
     public class Post : Base
     {
         public Post(int categoryId, int authorId, string title, string summary, string body, string slug) : base(slug)
@@ -23,6 +26,8 @@
         public string Body { get; set; }
         public DateTime CreateDate { get; set; }
         public DateTime LastUpdateDate { get; set; }
+
+        [Write(false)]
         public List<Tag> Tags { get; set; } = new List<Tag>();
     }
 }
