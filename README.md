@@ -20,7 +20,6 @@ O desafio se consiste em conectar ao banco de dados "Blog" criado nas aulas ante
  - Listar usuários (Nome, Email e perfis separados por vírgula)
  - Listar categorias com quantidade de posts
  - Listar tags com quantidade de posts
- - Listar tags com quantidade de posts
  - Listar os posts de uma categoria
  - Listar todos os posts com sua categoria
  - Listar os posts com suas tags (separadas por vírgula)

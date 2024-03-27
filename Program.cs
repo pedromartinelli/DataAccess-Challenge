@@ -1,5 +1,5 @@
-﻿using Blog_Challenge.Models;
-using Blog_Challenge.Repositories;
+﻿using Blog_Challenge;
+using Blog_Challenge.Screens.UserScreens;
 using Microsoft.Data.SqlClient;
 
 namespace Blog;
@@ -7,20 +7,44 @@ namespace Blog;
 class Program
 {
     private const string CONNECTION_STRING = @"Server=localhost,1433;Database=Blog;User ID=sa;Password=1q2w3e!@#;TrustServerCertificate=true";
+
     static void Main(string[] args)
     {
-        var connection = new SqlConnection(CONNECTION_STRING);
-        connection.Open();
-        ReadUser(connection, 2);
-        connection.Close();
+        Database.Connection = new SqlConnection(CONNECTION_STRING);
+        Database.Connection.Open();
+
+        Load();
+
+        Console.ReadKey();
+        Database.Connection.Close();
     }
 
-    public static void ReadUser(SqlConnection connection, int id)
+    private static void Load()
     {
-        var repository = new Repository<User>(connection);
+        Console.WriteLine();
+        Console.WriteLine("Meu Blog");
+        Console.WriteLine("--------");
+        Console.WriteLine("O que deseja fazer?");
+        Console.WriteLine("1 --- Gerenciar usuários");
+        Console.WriteLine("2 --- Voltar");
+        Console.WriteLine("0 --- Sair da aplicação");
+        Console.Write("Selecione uma das opções acima: ");
+        var option = short.Parse(Console.ReadLine()!);
 
-        var user = repository.Get(id);
+        switch (option)
+        {
+            case 1:
+                ListUsersScreen.ListUsers(Database.Connection);
+                break;
+            case 2:
+                Load();
+                break;
+            case 0:
+                Environment.Exit(0);
+                break;
+            default: break;
+        }
 
-        Console.WriteLine($"\n{user.Name} - {user.Email}");
+        Load();
     }
 }
