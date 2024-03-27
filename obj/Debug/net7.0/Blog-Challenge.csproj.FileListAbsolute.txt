@@ -1,0 +1,14 @@
+C:\Prog\balta\DataAccess\Blog-Challenge\bin\Debug\net7.0\Blog-Challenge.exe
+C:\Prog\balta\DataAccess\Blog-Challenge\bin\Debug\net7.0\Blog-Challenge.deps.json
+C:\Prog\balta\DataAccess\Blog-Challenge\bin\Debug\net7.0\Blog-Challenge.runtimeconfig.json
+C:\Prog\balta\DataAccess\Blog-Challenge\bin\Debug\net7.0\Blog-Challenge.dll
+C:\Prog\balta\DataAccess\Blog-Challenge\bin\Debug\net7.0\Blog-Challenge.pdb
+C:\Prog\balta\DataAccess\Blog-Challenge\obj\Debug\net7.0\Blog-Challenge.GeneratedMSBuildEditorConfig.editorconfig
+C:\Prog\balta\DataAccess\Blog-Challenge\obj\Debug\net7.0\Blog-Challenge.AssemblyInfoInputs.cache
+C:\Prog\balta\DataAccess\Blog-Challenge\obj\Debug\net7.0\Blog-Challenge.AssemblyInfo.cs
+C:\Prog\balta\DataAccess\Blog-Challenge\obj\Debug\net7.0\Blog-Challenge.csproj.CoreCompileInputs.cache
+C:\Prog\balta\DataAccess\Blog-Challenge\obj\Debug\net7.0\Blog-Challenge.dll
+C:\Prog\balta\DataAccess\Blog-Challenge\obj\Debug\net7.0\refint\Blog-Challenge.dll
+C:\Prog\balta\DataAccess\Blog-Challenge\obj\Debug\net7.0\Blog-Challenge.pdb
+C:\Prog\balta\DataAccess\Blog-Challenge\obj\Debug\net7.0\Blog-Challenge.genruntimeconfig.cache
+C:\Prog\balta\DataAccess\Blog-Challenge\obj\Debug\net7.0\ref\Blog-Challenge.dll
