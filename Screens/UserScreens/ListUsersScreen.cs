@@ -13,6 +13,7 @@ namespace Blog_Challenge.Screens.UserScreens
             Console.WriteLine("-----------------");
             List();
             Console.WriteLine("");
+            Console.WriteLine("Pressione qualquer tecla para voltar...");
             Console.ReadKey();
             UserMenu.Load();
         }

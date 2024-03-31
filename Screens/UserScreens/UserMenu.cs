@@ -31,7 +31,10 @@ namespace Blog_Challenge.Screens.UserScreens
                     ListUsersScreen.Load();
                     break;
                 case 2:
-                    Console.WriteLine("Cadastrar usuário");
+                    CreateUserScreen.Load();
+                    break;
+                case 3:
+                    RoleToUserScreen.Load();
                     break;
                 case 0:
                     Program.Load();
