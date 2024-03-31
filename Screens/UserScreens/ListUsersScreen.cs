@@ -6,10 +6,20 @@ namespace Blog_Challenge.Screens.UserScreens
 {
     public static class ListUsersScreen
     {
-
-        public static void ListUsers(SqlConnection connection)
+        public static void Load()
         {
-            var repository = new Repository<User>(connection);
+            Console.Clear();
+            Console.WriteLine("Lista de usuários");
+            Console.WriteLine("-----------------");
+            List();
+            Console.WriteLine("");
+            Console.ReadKey();
+            UserMenu.Load();
+        }
+
+        private static void List()
+        {
+            var repository = new Repository<User>(Database.Connection);
 
             var users = repository.GetAll();
 

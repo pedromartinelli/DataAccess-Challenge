@@ -1,6 +1,7 @@
 ﻿using Blog_Challenge;
 using Blog_Challenge.Screens.UserScreens;
 using Microsoft.Data.SqlClient;
+using InvalidOperationException = System.InvalidOperationException;
 
 namespace Blog;
 
@@ -19,32 +20,29 @@ class Program
         Database.Connection.Close();
     }
 
-    private static void Load()
+    public static void Load()
     {
+        Console.Clear();
         Console.WriteLine();
         Console.WriteLine("Meu Blog");
         Console.WriteLine("--------");
         Console.WriteLine("O que deseja fazer?");
-        Console.WriteLine("1 --- Gerenciar usuários");
-        Console.WriteLine("2 --- Voltar");
+        Console.WriteLine("");
+        Console.WriteLine("1 --- Gestão de usuário");
         Console.WriteLine("0 --- Sair da aplicação");
+        Console.WriteLine("");
         Console.Write("Selecione uma das opções acima: ");
         var option = short.Parse(Console.ReadLine()!);
 
         switch (option)
         {
             case 1:
-                ListUsersScreen.ListUsers(Database.Connection);
-                break;
-            case 2:
-                Load();
+                UserMenu.Load();
                 break;
             case 0:
                 Environment.Exit(0);
                 break;
-            default: break;
+            default: Load(); break;
         }
-
-        Load();
     }
 }
