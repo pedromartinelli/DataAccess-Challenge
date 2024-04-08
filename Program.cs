@@ -1,4 +1,5 @@
 ﻿using Blog_Challenge;
+using Blog_Challenge.Screens.CategoryScreens;
 using Blog_Challenge.Screens.UserScreens;
 using Microsoft.Data.SqlClient;
 using InvalidOperationException = System.InvalidOperationException;
@@ -29,6 +30,7 @@ class Program
         Console.WriteLine("O que deseja fazer?");
         Console.WriteLine("");
         Console.WriteLine("1 --- Gestão de usuário");
+        Console.WriteLine("2 --- Gestão de categorias");
         Console.WriteLine("0 --- Sair da aplicação");
         Console.WriteLine("");
         Console.Write("Selecione uma das opções acima: ");
@@ -38,6 +40,9 @@ class Program
         {
             case 1:
                 UserMenu.Load();
+                break;
+            case 2:
+                CategoryMenu.Load();
                 break;
             case 0:
                 Environment.Exit(0);

@@ -5,6 +5,7 @@ namespace Blog_Challenge.Models
     [Table("[Post]")]
     public class Post : Base
     {
+        public Post() { }
         public Post(int categoryId, int authorId, string title, string summary, string body, string slug) : base(slug)
         {
             CategoryId = categoryId;
@@ -21,9 +22,9 @@ namespace Blog_Challenge.Models
         public int AuthorId { get; set; }
         public User Author { get; set; } = null!;
 
-        public string Title { get; set; }
-        public string Summary { get; set; }
-        public string Body { get; set; }
+        public string Title { get; set; } = string.Empty;
+        public string Summary { get; set; } = string.Empty;
+        public string Body { get; set; } = string.Empty;
         public DateTime CreateDate { get; set; }
         public DateTime LastUpdateDate { get; set; }
 
